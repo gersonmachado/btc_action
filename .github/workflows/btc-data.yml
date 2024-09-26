@@ -32,3 +32,12 @@ jobs:
       - name: Run BTC script
         run: |
           python app.py
+      
+      # Adicionar e fazer commit das mudanças
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "gersonmachado.mib@gmail.com"
+          git config --local user.name "gersonmachado"
+          git add data.csv
+          git commit -m "Atualizando data.csv com novo valor BTC" || echo "Nenhuma alteração para commit"
+          git push
