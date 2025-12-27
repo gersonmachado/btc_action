@@ -14,7 +14,7 @@ except FileNotFoundError:
 
 # Obter o valor do dólar através do código 'BRL=X' (BRL para USD)
 dolar_brl = yf.Ticker('BRL=X')
-valor_dolar = dolar_brl.history(period='1d')['Close'].iloc[0]
+valor_dolar = float(dolar_brl.history(period='1d')['Close'].iloc[0])
 
 # Obter o valor do Bitcoin em dólares (BTC-USD)
 btc = yf.Ticker('BTC-USD')
