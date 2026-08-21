@@ -41,4 +41,4 @@ jobs:
           git config --local user.name "gersonmachado"
           git add data.csv
           git commit -m "Atualizando data.csv com novo valor BTC" || echo "Nenhuma alteração para commit"
-          git push
+          git push --force origin main
